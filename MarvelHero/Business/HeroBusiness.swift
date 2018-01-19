@@ -13,6 +13,18 @@ struct HeroBusiness {
     
     func getAllHero() {
         provider.getHeros { (result) in
+            do {
+                guard let heroesJson = try result() else {
+                    throw TecnicalError.parserError
+                }
+                
+                let data = try JSONSerialization.data(withJSONObject: heroesJson, options: .prettyPrinted)
+                let decoder = JSONDecoder()
+                let heroes: Hero = try decoder.decode(Hero.self, from: data)                
+            } catch {
+            
+            }
+        
             
         }
     }

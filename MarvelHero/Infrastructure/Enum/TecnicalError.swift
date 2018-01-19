@@ -10,4 +10,5 @@ import Foundation
 enum TecnicalError: Error {
     case invalidUrl
     case requestError
+    case parserError
 }
