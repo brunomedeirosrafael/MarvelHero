@@ -14,6 +14,10 @@
 		6BC39B2F200264C000667EEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BC39B2D200264C000667EEE /* LaunchScreen.storyboard */; };
 		6BC39B3A200264C000667EEE /* MarvelHeroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC39B39200264C000667EEE /* MarvelHeroTests.swift */; };
 		6BC39B45200264C000667EEE /* MarvelHeroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC39B44200264C000667EEE /* MarvelHeroUITests.swift */; };
+		6BC39B562002832800667EEE /* HerosProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC39B552002832800667EEE /* HerosProvider.swift */; };
+		6BC39B582002853800667EEE /* HerosProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC39B572002853800667EEE /* HerosProviderTests.swift */; };
+		6BC39B5B20029F6A00667EEE /* TecnicalError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC39B5A20029F6A00667EEE /* TecnicalError.swift */; };
+		6BC39B5E2002ED7100667EEE /* HeroBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC39B5D2002ED7100667EEE /* HeroBusiness.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		6BC39B40200264C000667EEE /* MarvelHeroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelHeroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC39B44200264C000667EEE /* MarvelHeroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelHeroUITests.swift; sourceTree = "<group>"; };
 		6BC39B46200264C000667EEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BC39B552002832800667EEE /* HerosProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosProvider.swift; sourceTree = "<group>"; };
+		6BC39B572002853800667EEE /* HerosProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosProviderTests.swift; sourceTree = "<group>"; };
+		6BC39B5A20029F6A00667EEE /* TecnicalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TecnicalError.swift; sourceTree = "<group>"; };
+		6BC39B5D2002ED7100667EEE /* HeroBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroBusiness.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +105,12 @@
 		6BC39B23200264C000667EEE /* MarvelHero */ = {
 			isa = PBXGroup;
 			children = (
-				6BC39B24200264C000667EEE /* AppDelegate.swift */,
-				6BC39B26200264C000667EEE /* ViewController.swift */,
-				6BC39B28200264C000667EEE /* Main.storyboard */,
-				6BC39B2B200264C000667EEE /* Assets.xcassets */,
-				6BC39B2D200264C000667EEE /* LaunchScreen.storyboard */,
+				6BC39B5C2002ED5E00667EEE /* Business */,
 				6BC39B30200264C000667EEE /* Info.plist */,
+				6BC39B54200265E200667EEE /* Provider */,
+				6BC39B532002651E00667EEE /* Infrastructure */,
+				6BC39B52200264DA00667EEE /* Resource */,
+				6BC39B26200264C000667EEE /* ViewController.swift */,
 			);
 			path = MarvelHero;
 			sourceTree = "<group>";
@@ -112,6 +120,7 @@
 			children = (
 				6BC39B39200264C000667EEE /* MarvelHeroTests.swift */,
 				6BC39B3B200264C000667EEE /* Info.plist */,
+				6BC39B572002853800667EEE /* HerosProviderTests.swift */,
 			);
 			path = MarvelHeroTests;
 			sourceTree = "<group>";
@@ -123,6 +132,49 @@
 				6BC39B46200264C000667EEE /* Info.plist */,
 			);
 			path = MarvelHeroUITests;
+			sourceTree = "<group>";
+		};
+		6BC39B52200264DA00667EEE /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				6BC39B28200264C000667EEE /* Main.storyboard */,
+				6BC39B2B200264C000667EEE /* Assets.xcassets */,
+				6BC39B2D200264C000667EEE /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		6BC39B532002651E00667EEE /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				6BC39B5920029F5800667EEE /* Enum */,
+				6BC39B24200264C000667EEE /* AppDelegate.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		6BC39B54200265E200667EEE /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				6BC39B552002832800667EEE /* HerosProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		6BC39B5920029F5800667EEE /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				6BC39B5A20029F6A00667EEE /* TecnicalError.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		6BC39B5C2002ED5E00667EEE /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				6BC39B5D2002ED7100667EEE /* HeroBusiness.swift */,
+			);
+			path = Business;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +311,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BC39B5E2002ED7100667EEE /* HeroBusiness.swift in Sources */,
 				6BC39B27200264C000667EEE /* ViewController.swift in Sources */,
+				6BC39B562002832800667EEE /* HerosProvider.swift in Sources */,
 				6BC39B25200264C000667EEE /* AppDelegate.swift in Sources */,
+				6BC39B5B20029F6A00667EEE /* TecnicalError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BC39B582002853800667EEE /* HerosProviderTests.swift in Sources */,
 				6BC39B3A200264C000667EEE /* MarvelHeroTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

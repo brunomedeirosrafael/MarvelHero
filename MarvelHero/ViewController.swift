@@ -13,6 +13,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        var heroProvider = HeroProvider()
+        heroProvider.getHeros { (result) in
+            do {
+                var teste = try result()
+                print(teste)
+            }catch {
+                
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
