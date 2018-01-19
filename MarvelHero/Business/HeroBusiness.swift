@@ -11,7 +11,7 @@ import Foundation
 struct HeroBusiness {
     let provider = HeroProvider()
     
-    func getAllHero() {
+    func getAllHero() -> [Hero] {
         provider.getHeros { (result) in
             do {
                 guard let heroesJson = try result() else {
@@ -20,12 +20,11 @@ struct HeroBusiness {
                 
                 let data = try JSONSerialization.data(withJSONObject: heroesJson, options: .prettyPrinted)
                 let decoder = JSONDecoder()
-                let heroes: Hero = try decoder.decode(Hero.self, from: data)                
+                let heroes: Hero = try decoder.decode(Hero.self, from: data)
+                return heroes
             } catch {
-            
+                throw error
             }
-        
-            
         }
     }
 }
